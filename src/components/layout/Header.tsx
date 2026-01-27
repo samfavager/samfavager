@@ -11,7 +11,7 @@ const Header = () => {
   const location = useLocation();
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-md border-b border-border">
+    <header className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-white/30">
       <div className="container-narrow flex items-center justify-between h-16">
         <Link to="/" className="flex items-center gap-2">
           <motion.span
