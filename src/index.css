@@ -35,16 +35,17 @@
 
     --radius: 0.5rem;
 
-    /* Psychedelic green gradient colors */
-    --psych-1: 120 80% 35%;
-    --psych-2: 160 90% 40%;
-    --psych-3: 140 100% 30%;
-    --psych-4: 100 70% 45%;
-    --psych-5: 180 85% 35%;
+    /* Psychedelic gradient colors - lighter greens with pink and blue */
+    --psych-1: 140 70% 55%;
+    --psych-2: 170 80% 60%;
+    --psych-3: 320 75% 65%;
+    --psych-4: 200 85% 60%;
+    --psych-5: 160 75% 50%;
+    --psych-6: 280 70% 70%;
 
     /* Fonts */
     --font-pixel: 'Pixelify Sans', monospace;
-    --font-body: 'Inter', sans-serif;
+    --font-body: 'Jersey 10 Charted', cursive;
 
     /* Shadows */
     --shadow-soft: 0 4px 20px -4px hsl(145 45% 28% / 0.1);
@@ -132,13 +133,13 @@
     z-index: -1;
     background: linear-gradient(
       -45deg,
-      hsl(120 80% 35%),
-      hsl(160 90% 40%),
-      hsl(140 100% 30%),
-      hsl(100 70% 45%),
-      hsl(180 85% 35%),
-      hsl(140 100% 30%),
-      hsl(120 80% 35%)
+      hsl(140 70% 55%),
+      hsl(320 75% 65%),
+      hsl(170 80% 60%),
+      hsl(200 85% 60%),
+      hsl(160 75% 50%),
+      hsl(280 70% 70%),
+      hsl(140 70% 55%)
     );
     background-size: 400% 400%;
     animation: psychedelic-flow 8s ease infinite;
@@ -150,9 +151,9 @@
     inset: 0;
     z-index: -1;
     background: 
-      radial-gradient(ellipse at 20% 30%, hsl(140 100% 50% / 0.3) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 70%, hsl(160 90% 45% / 0.4) 0%, transparent 50%),
-      radial-gradient(ellipse at 50% 50%, hsl(120 80% 40% / 0.2) 0%, transparent 60%);
+      radial-gradient(ellipse at 20% 30%, hsl(320 80% 70% / 0.4) 0%, transparent 50%),
+      radial-gradient(ellipse at 80% 70%, hsl(200 90% 65% / 0.4) 0%, transparent 50%),
+      radial-gradient(ellipse at 50% 50%, hsl(160 80% 55% / 0.3) 0%, transparent 60%);
     animation: psychedelic-pulse 6s ease-in-out infinite alternate;
   }
 

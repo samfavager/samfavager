@@ -15,7 +15,7 @@ export default {
     extend: {
       fontFamily: {
         pixel: ['Pixelify Sans', 'monospace'],
-        sans: ['Inter', 'sans-serif'],
+        sans: ['Jersey 10 Charted', 'cursive'],
       },
       colors: {
         border: "hsl(var(--border))",
