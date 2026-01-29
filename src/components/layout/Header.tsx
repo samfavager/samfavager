@@ -3,7 +3,8 @@ import { motion } from "framer-motion";
 
 const navItems = [
   { name: "Portfolio", path: "/" },
-  { name: "Protocols & Frameworks", path: "/protocols" },
+  { name: "My Process", path: "/process" },
+  { name: "My Thoughts", path: "/thoughts" },
   { name: "Contact", path: "/contact" },
 ];
 
