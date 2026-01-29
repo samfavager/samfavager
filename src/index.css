@@ -4,80 +4,45 @@
 
 @layer base {
   :root {
-    /* Green-based palette */
-    --background: 140 20% 98%;
-    --foreground: 140 10% 5%;
+    /* Dark dashboard palette */
+    --background: 220 15% 8%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 140 10% 5%;
+    --card: 220 15% 12%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 140 10% 5%;
+    --popover: 220 15% 12%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 145 45% 28%;
-    --primary-foreground: 140 20% 98%;
+    --primary: 210 100% 55%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 140 25% 90%;
-    --secondary-foreground: 140 10% 5%;
+    --secondary: 45 100% 55%;
+    --secondary-foreground: 220 15% 8%;
 
-    --muted: 140 15% 92%;
-    --muted-foreground: 140 10% 40%;
+    --muted: 220 10% 20%;
+    --muted-foreground: 220 10% 60%;
 
-    --accent: 150 55% 35%;
-    --accent-foreground: 140 20% 98%;
+    --accent: 340 80% 55%;
+    --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 140 20% 85%;
-    --input: 140 20% 85%;
-    --ring: 145 45% 28%;
+    --border: 220 10% 20%;
+    --input: 220 10% 20%;
+    --ring: 210 100% 55%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
-    /* Psychedelic gradient colors - grayscale */
-    --psych-1: 0 0% 85%;
-    --psych-2: 0 0% 70%;
-    --psych-3: 0 0% 55%;
-    --psych-4: 0 0% 75%;
-    --psych-5: 0 0% 90%;
-    --psych-6: 0 0% 60%;
+    /* Device colors */
+    --device-bg: 210 70% 45%;
+    --device-border: 210 60% 35%;
+    --device-shadow: 210 80% 25%;
 
     /* Fonts */
-    --font-pixel: 'Coral Pixels', cursive;
-    --font-body: 'Jersey 10 Charted', cursive;
-
-    /* Shadows */
-    --shadow-soft: 0 4px 20px -4px hsl(145 45% 28% / 0.1);
-    --shadow-card: 0 2px 12px -2px hsl(145 45% 28% / 0.08);
-    --shadow-hover: 0 8px 30px -8px hsl(145 45% 28% / 0.15);
-  }
-
-  .dark {
-    --background: 155 40% 6%;
-    --foreground: 140 20% 95%;
-
-    --card: 150 35% 10%;
-    --card-foreground: 140 20% 95%;
-
-    --popover: 150 35% 10%;
-    --popover-foreground: 140 20% 95%;
-
-    --primary: 145 50% 55%;
-    --primary-foreground: 155 40% 6%;
-
-    --secondary: 150 30% 15%;
-    --secondary-foreground: 140 20% 95%;
-
-    --muted: 150 25% 18%;
-    --muted-foreground: 140 15% 60%;
-
-    --accent: 148 55% 45%;
-    --accent-foreground: 155 40% 6%;
-
-    --border: 150 25% 18%;
-    --input: 150 25% 18%;
-    --ring: 145 50% 55%;
+    --font-display: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
   }
 }
 
@@ -87,167 +52,171 @@
   }
 
   body {
-    @apply text-foreground antialiased;
+    @apply bg-background text-foreground antialiased;
     font-family: var(--font-body);
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-semibold tracking-tight;
+    font-family: var(--font-display);
+    @apply font-bold tracking-tight;
   }
 }
 
-@layer components {
-  .font-pixel {
-    font-family: var(--font-pixel);
-  }
+/* Dotted grid background */
+.bg-dotted-grid {
+  background-image: 
+    radial-gradient(circle, hsl(220 10% 25%) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
 
-  .text-gradient {
-    @apply bg-clip-text text-transparent;
-    background-image: linear-gradient(135deg, hsl(var(--primary)) 0%, hsl(var(--accent)) 100%);
-  }
+/* Device styling */
+.device {
+  background: linear-gradient(
+    145deg,
+    hsl(var(--device-bg)),
+    hsl(210 65% 40%)
+  );
+  border: 4px solid hsl(var(--device-border));
+  box-shadow: 
+    0 20px 60px -10px hsl(var(--device-shadow) / 0.8),
+    0 0 0 2px hsl(210 50% 30%),
+    inset 0 2px 0 hsl(210 80% 60% / 0.3);
+}
 
-  /* Psychedelic animated gradient background */
-  .bg-psychedelic {
-    background: linear-gradient(
-      -45deg,
-      hsl(var(--psych-1)),
-      hsl(var(--psych-2)),
-      hsl(var(--psych-3)),
-      hsl(var(--psych-4)),
-      hsl(var(--psych-5)),
-      hsl(var(--psych-3)),
-      hsl(var(--psych-1))
-    );
-    background-size: 400% 400%;
-    animation: psychedelic-flow 8s ease infinite;
-  }
+/* Device screen area */
+.device-screen {
+  background: linear-gradient(
+    180deg,
+    hsl(220 20% 10%),
+    hsl(220 15% 8%)
+  );
+  box-shadow: 
+    inset 0 2px 10px hsl(0 0% 0% / 0.5),
+    inset 0 0 0 2px hsl(210 40% 25%);
+}
 
-  .bg-psychedelic-overlay {
-    position: relative;
-  }
+/* Glowing button */
+.glow-button {
+  @apply relative overflow-hidden;
+  box-shadow: 
+    0 0 20px hsl(var(--secondary) / 0.4),
+    0 4px 12px hsl(0 0% 0% / 0.3);
+  transition: all 0.3s ease;
+}
 
-  .bg-psychedelic-overlay::before {
-    content: '';
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    background: linear-gradient(
-      -45deg,
-      hsl(0 0% 90%),
-      hsl(0 0% 70%),
-      hsl(0 0% 80%),
-      hsl(0 0% 60%),
-      hsl(0 0% 85%),
-      hsl(0 0% 75%),
-      hsl(0 0% 90%)
-    );
-    background-size: 400% 400%;
-    animation: psychedelic-flow 8s ease infinite;
-  }
+.glow-button:hover {
+  box-shadow: 
+    0 0 30px hsl(var(--secondary) / 0.6),
+    0 6px 16px hsl(0 0% 0% / 0.4);
+  transform: translateY(-2px);
+}
 
-  .bg-psychedelic-overlay::after {
-    content: '';
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    background: 
-      radial-gradient(ellipse at 20% 30%, hsl(0 0% 50% / 0.3) 0%, transparent 50%),
-      radial-gradient(ellipse at 80% 70%, hsl(0 0% 65% / 0.3) 0%, transparent 50%),
-      radial-gradient(ellipse at 50% 50%, hsl(0 0% 80% / 0.25) 0%, transparent 60%);
-    animation: psychedelic-pulse 6s ease-in-out infinite alternate;
-  }
+/* Popup card */
+.popup-card {
+  background: linear-gradient(
+    145deg,
+    hsl(220 15% 15%),
+    hsl(220 15% 12%)
+  );
+  border: 2px solid hsl(220 10% 25%);
+  box-shadow: 
+    0 25px 80px -20px hsl(0 0% 0% / 0.8),
+    0 0 0 1px hsl(220 10% 20%);
+}
 
-  .card-hover {
-    @apply transition-all duration-300 ease-out;
-    box-shadow: var(--shadow-card);
-    background: hsl(0 0% 100% / 0.9);
-    backdrop-filter: blur(8px);
-  }
+/* Spring animation */
+@keyframes spring-bounce {
+  0%, 100% { transform: translateY(0) scaleY(1); }
+  50% { transform: translateY(-8px) scaleY(1.02); }
+}
 
-  .card-hover:hover {
-    box-shadow: var(--shadow-hover);
-    transform: translateY(-2px);
-  }
+.spring-animation {
+  animation: spring-bounce 3s ease-in-out infinite;
+}
 
-  .nav-link {
-    @apply relative px-4 py-2 text-sm font-medium transition-colors;
-  }
+/* Face idle animation */
+@keyframes face-idle {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
 
-  .nav-link::after {
-    @apply absolute bottom-0 left-1/2 h-0.5 w-0 bg-primary transition-all duration-300;
-    content: '';
-    transform: translateX(-50%);
-  }
+.face-idle {
+  animation: face-idle 2s ease-in-out infinite;
+}
 
-  .nav-link:hover::after,
-  .nav-link.active::after {
-    @apply w-full;
-  }
+/* Blink animation */
+@keyframes blink {
+  0%, 45%, 55%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.1); }
+}
 
-  .section-padding {
-    @apply py-16 md:py-24 lg:py-32;
-  }
+.blink-animation {
+  animation: blink 4s ease-in-out infinite;
+}
 
-  .container-narrow {
-    @apply mx-auto max-w-5xl px-6;
-  }
+/* Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
 
-  .glass-card {
-    @apply bg-white/90 backdrop-blur-md border border-white/50;
-  }
+.animate-marquee {
+  animation: marquee 20s linear infinite;
+}
+
+/* Hover lift */
+.hover-lift {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px);
+}
+
+/* Dots pattern overlay */
+.dots-overlay {
+  background-image: 
+    radial-gradient(circle, hsl(0 0% 100% / 0.03) 1px, transparent 1px);
+  background-size: 8px 8px;
+}
+
+/* Project card */
+.project-card {
+  background: linear-gradient(
+    145deg,
+    hsl(220 15% 14%),
+    hsl(220 15% 10%)
+  );
+  border: 2px solid hsl(220 10% 22%);
+  transition: all 0.3s ease;
+}
+
+.project-card:hover {
+  border-color: hsl(var(--primary) / 0.5);
+  box-shadow: 0 0 30px hsl(var(--primary) / 0.15);
+}
+
+/* Status indicator */
+.status-dot {
+  @apply w-2 h-2 rounded-full;
+  box-shadow: 0 0 8px currentColor;
+}
+
+/* Close button */
+.close-button {
+  @apply w-8 h-8 rounded-full flex items-center justify-center;
+  background: hsl(0 70% 50%);
+  box-shadow: 0 2px 8px hsl(0 70% 30% / 0.5);
+  transition: all 0.2s ease;
+}
+
+.close-button:hover {
+  background: hsl(0 70% 55%);
+  transform: scale(1.1);
 }
 
 @layer utilities {
-  .animate-fade-in {
-    animation: fadeIn 0.6s ease-out forwards;
-  }
-
-  .animate-slide-up {
-    animation: slideUp 0.6s ease-out forwards;
-  }
-
-  @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
-  }
-
-  @keyframes slideUp {
-    from {
-      opacity: 0;
-      transform: translateY(20px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes psychedelic-flow {
-    0% {
-      background-position: 0% 50%;
-    }
-    25% {
-      background-position: 100% 25%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-    75% {
-      background-position: 0% 75%;
-    }
-    100% {
-      background-position: 0% 50%;
-    }
-  }
-
-  @keyframes psychedelic-pulse {
-    0% {
-      opacity: 0.6;
-      transform: scale(1);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1.1);
-    }
+  .text-shadow-glow {
+    text-shadow: 0 0 20px currentColor;
   }
 }
