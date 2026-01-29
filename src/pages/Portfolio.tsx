@@ -42,9 +42,6 @@ const Portfolio = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <h1 className="font-pixel text-4xl md:text-6xl lg:text-7xl text-foreground mb-6">
-              Sam Favager
-            </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mb-8 leading-relaxed">
               Product Manager passionate about building products that make a difference. 
               I bridge the gap between user needs, business goals, and technical possibilities.
@@ -58,7 +55,7 @@ const Portfolio = () => {
                 <ArrowRight className="w-4 h-4" />
               </Link>
               <Link
-                to="/protocols"
+                to="/process"
                 className="inline-flex items-center gap-2 px-6 py-3 border border-border text-foreground rounded-lg font-medium transition-all hover:bg-secondary"
               >
                 View My Process
@@ -68,21 +65,24 @@ const Portfolio = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-12 border-y border-border bg-card/50">
+      {/* Stats Section - Playful Style */}
+      <section className="py-16">
         <div className="container-narrow">
-          <div className="grid grid-cols-3 gap-8">
+          <div className="flex flex-wrap justify-center gap-6">
             {stats.map((stat, index) => (
               <motion.div
                 key={stat.label}
-                className="text-center"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.5, delay: index * 0.1 }}
+                className="group relative"
+                initial={{ opacity: 0, scale: 0.8, rotate: -5 }}
+                animate={{ opacity: 1, scale: 1, rotate: 0 }}
+                transition={{ duration: 0.5, delay: index * 0.15, type: "spring" }}
+                whileHover={{ scale: 1.05, rotate: 2 }}
               >
-                <stat.icon className="w-6 h-6 mx-auto mb-2 text-primary" />
-                <p className="text-2xl md:text-3xl font-semibold text-foreground">{stat.value}</p>
-                <p className="text-sm text-muted-foreground">{stat.label}</p>
+                <div className="p-6 bg-card rounded-2xl border-2 border-border shadow-lg transform transition-transform">
+                  <stat.icon className="w-8 h-8 mb-3 text-primary" />
+                  <p className="font-pixel text-3xl md:text-4xl text-foreground mb-1">{stat.value}</p>
+                  <p className="text-sm text-muted-foreground">{stat.label}</p>
+                </div>
               </motion.div>
             ))}
           </div>

@@ -14,7 +14,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        pixel: ['Pixelify Sans', 'monospace'],
+        pixel: ['Coral Pixels', 'cursive'],
         sans: ['Jersey 10 Charted', 'cursive'],
       },
       colors: {

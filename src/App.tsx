@@ -4,7 +4,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Portfolio from "./pages/Portfolio";
-import Protocols from "./pages/Protocols";
+import MyThoughts from "./pages/MyThoughts";
+import MyProcess from "./pages/MyProcess";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -18,7 +19,8 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Portfolio />} />
-          <Route path="/protocols" element={<Protocols />} />
+          <Route path="/thoughts" element={<MyThoughts />} />
+          <Route path="/process" element={<MyProcess />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
