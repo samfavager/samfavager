@@ -18,7 +18,7 @@ const Landing = () => {
       <div className="absolute bottom-0 right-0 w-20 h-16 bg-gradient-to-tl from-[#2a3a2a] to-transparent" />
 
       {/* Social links - top left */}
-      <div className="absolute top-6 left-6 flex gap-4 z-10">
+      <div className="absolute top-6 left-6 flex items-center gap-4 z-10">
         <a 
           href="https://substack.com" 
           target="_blank" 
@@ -26,8 +26,10 @@ const Landing = () => {
           className="text-white hover:text-white/70 transition-colors"
           aria-label="Substack"
         >
-          <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
-            <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24l9.54-5.29L20.54 24V10.812H1.46zm0-8.242V0h21.08v2.57H1.46z"/>
+          <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <rect x="3" y="1" width="18" height="4" rx="1" fill="currentColor" stroke="none"/>
+            <rect x="3" y="7" width="18" height="4" rx="1" fill="currentColor" stroke="none"/>
+            <path d="M3 13h18v2L12 22 3 15v-2z" fill="currentColor" stroke="none"/>
           </svg>
         </a>
         <a 
@@ -70,27 +72,43 @@ const Landing = () => {
             <Link
               to="/work"
               onClick={() => setMenuOpen(false)}
-              className="text-4xl md:text-6xl font-bold text-white hover:text-amber-400 transition-colors"
+              className="text-4xl md:text-6xl font-bold text-white hover:text-primary transition-colors"
             >
               Work
             </Link>
             <Link
               to="/thinking"
               onClick={() => setMenuOpen(false)}
-              className="text-4xl md:text-6xl font-bold text-white hover:text-amber-400 transition-colors"
+              className="text-4xl md:text-6xl font-bold text-white hover:text-primary transition-colors"
             >
               Thinking
             </Link>
             <Link
+              to="/how-i-can-help"
+              onClick={() => setMenuOpen(false)}
+              className="text-4xl md:text-6xl font-bold text-white hover:text-primary transition-colors"
+            >
+              How I Can Help
+            </Link>
+            <Link
               to="/contact"
               onClick={() => setMenuOpen(false)}
-              className="text-4xl md:text-6xl font-bold text-white hover:text-amber-400 transition-colors"
+              className="text-4xl md:text-6xl font-bold text-white hover:text-primary transition-colors"
             >
               Contact
             </Link>
           </nav>
         </div>
       )}
+
+      {/* Value proposition box */}
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 max-w-lg mx-4">
+        <div className="bg-white/10 backdrop-blur-md rounded-2xl px-6 py-4 text-center border border-white/20">
+          <p className="text-white text-sm md:text-base font-medium">
+            Fractional CPO & Product Director — helping startups build products users love
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
