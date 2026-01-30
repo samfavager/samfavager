@@ -26,10 +26,8 @@ const Landing = () => {
           className="text-white hover:text-white/70 transition-colors"
           aria-label="Substack"
         >
-          <svg className="w-6 h-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <rect x="3" y="1" width="18" height="4" rx="1" fill="currentColor" stroke="none"/>
-            <rect x="3" y="7" width="18" height="4" rx="1" fill="currentColor" stroke="none"/>
-            <path d="M3 13h18v2L12 22 3 15v-2z" fill="currentColor" stroke="none"/>
+          <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
           </svg>
         </a>
         <a 
@@ -102,9 +100,9 @@ const Landing = () => {
       )}
 
       {/* Value proposition box */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-10 max-w-lg mx-4">
-        <div className="bg-white/10 backdrop-blur-md rounded-2xl px-6 py-4 text-center border border-white/20">
-          <p className="text-white text-sm md:text-base font-medium">
+      <div className="absolute bottom-8 left-8 z-10">
+        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 w-64 h-64 flex items-center justify-center">
+          <p className="text-white text-xl md:text-2xl text-center" style={{ fontFamily: "'Permanent Marker', cursive" }}>
             Fractional CPO & Product Director — helping startups build products users love
           </p>
         </div>
