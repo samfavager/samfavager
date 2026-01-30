@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./pages/Landing";
 import Work from "./pages/Work";
 import Thinking from "./pages/Thinking";
+import HowICanHelp from "./pages/HowICanHelp";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
 
@@ -21,6 +22,7 @@ const App = () => (
           <Route path="/" element={<Landing />} />
           <Route path="/work" element={<Work />} />
           <Route path="/thinking" element={<Thinking />} />
+          <Route path="/how-i-can-help" element={<HowICanHelp />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
