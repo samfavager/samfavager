@@ -15,7 +15,7 @@ const Landing = () => {
       />
       
       {/* Overlay to hide watermark in bottom right */}
-      <div className="absolute bottom-0 right-0 w-20 h-16 bg-gradient-to-tl from-[#2a3a2a] to-transparent" />
+      <div className="absolute bottom-0 right-0 w-24 h-20 bg-gradient-to-tl from-[#3d4a3d] via-[#3d4a3d]/80 to-transparent" />
 
       {/* Social links - top left */}
       <div className="absolute top-6 left-6 flex items-center gap-4 z-10">
