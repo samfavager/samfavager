@@ -101,8 +101,8 @@ const Landing = () => {
 
       {/* Value proposition box */}
       <div className="absolute bottom-8 left-8 z-10">
-        <div className="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20 w-64 h-64 flex items-center justify-center">
-          <p className="text-white text-xl md:text-2xl text-center" style={{ fontFamily: "'Permanent Marker', cursive" }}>
+        <div className="bg-white/70 backdrop-blur-md rounded-2xl p-6 border border-white/40 w-64 h-64 flex items-center">
+          <p className="text-black text-xl md:text-2xl text-left" style={{ fontFamily: "'Permanent Marker', cursive" }}>
             Fractional CPO & Product Director — helping startups build products users love
           </p>
         </div>
