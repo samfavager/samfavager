@@ -42,7 +42,7 @@ const blogPosts = [
 
 const Thinking = () => {
   return (
-    <div className="min-h-screen bg-[#1a2a1a] text-white">
+    <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
       <header className="p-6 flex items-center justify-between">
         <Link 
@@ -52,16 +52,16 @@ const Thinking = () => {
           <ArrowLeft className="w-5 h-5" />
           Back
         </Link>
-        <h1 className="text-xl font-bold text-amber-400">Thinking</h1>
+        <h1 className="text-xl font-bold text-primary">Thinking</h1>
       </header>
 
       <main className="max-w-4xl mx-auto px-6 pb-20">
         <div className="mb-12">
           <h2 className="text-3xl font-bold flex items-center gap-3">
-            <BookOpen className="w-8 h-8 text-amber-400" />
+            <BookOpen className="w-8 h-8 text-primary" />
             Thoughts & Writing
           </h2>
-          <p className="text-white/60 mt-2">Ideas on product, strategy, and building things.</p>
+          <p className="text-muted-foreground mt-2">Ideas on product, strategy, and building things.</p>
         </div>
 
         {/* Blog Cards */}
@@ -69,17 +69,17 @@ const Thinking = () => {
           {blogPosts.map((post, index) => (
             <article
               key={index}
-              className="bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors cursor-pointer group"
+              className="bg-card border border-border rounded-xl p-6 hover:bg-secondary transition-colors cursor-pointer group"
             >
-              <div className="flex items-center gap-3 text-sm text-white/50 mb-3">
+              <div className="flex items-center gap-3 text-sm text-muted-foreground mb-3">
                 <span>{post.date}</span>
                 <span>•</span>
                 <span>{post.readTime}</span>
               </div>
-              <h3 className="text-xl font-bold group-hover:text-amber-400 transition-colors">
+              <h3 className="text-xl font-bold group-hover:text-primary transition-colors">
                 {post.title}
               </h3>
-              <p className="text-white/70 mt-2">{post.excerpt}</p>
+              <p className="text-muted-foreground mt-2">{post.excerpt}</p>
             </article>
           ))}
         </div>

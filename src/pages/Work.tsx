@@ -53,7 +53,7 @@ const portfolioItems = [
 
 const Work = () => {
   return (
-    <div className="min-h-screen bg-[#1a2a1a] text-white">
+    <div className="min-h-screen bg-background text-foreground">
       {/* Header */}
       <header className="p-6 flex items-center justify-between">
         <Link 
@@ -63,7 +63,7 @@ const Work = () => {
           <ArrowLeft className="w-5 h-5" />
           Back
         </Link>
-        <h1 className="text-xl font-bold text-amber-400">Work</h1>
+        <h1 className="text-xl font-bold text-primary">Work</h1>
       </header>
 
       <main className="max-w-4xl mx-auto px-6 pb-20">
@@ -72,7 +72,7 @@ const Work = () => {
           <a
             href="/resume.pdf"
             download
-            className="inline-flex items-center gap-3 bg-amber-400 text-black px-6 py-3 rounded-lg font-semibold hover:bg-amber-300 transition-colors"
+            className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-6 py-3 rounded-lg font-semibold hover:bg-primary/90 transition-colors"
           >
             <Download className="w-5 h-5" />
             Download Resume (PDF)
@@ -82,17 +82,17 @@ const Work = () => {
         {/* Work Timeline */}
         <section className="mb-16">
           <h2 className="text-2xl font-bold mb-8 flex items-center gap-3">
-            <Briefcase className="w-6 h-6 text-amber-400" />
+            <Briefcase className="w-6 h-6 text-primary" />
             Work History
           </h2>
-          <div className="relative border-l-2 border-amber-400/30 pl-8 space-y-10">
+          <div className="relative border-l-2 border-primary/30 pl-8 space-y-10">
             {workHistory.map((item, index) => (
               <div key={index} className="relative">
-                <div className="absolute -left-[41px] w-4 h-4 bg-amber-400 rounded-full" />
-                <span className="text-amber-400 text-sm font-medium">{item.year}</span>
+                <div className="absolute -left-[41px] w-4 h-4 bg-primary rounded-full" />
+                <span className="text-primary text-sm font-medium">{item.year}</span>
                 <h3 className="text-xl font-bold mt-1">{item.role}</h3>
-                <p className="text-white/60 font-medium">{item.company}</p>
-                <p className="text-white/70 mt-2">{item.description}</p>
+                <p className="text-muted-foreground font-medium">{item.company}</p>
+                <p className="text-foreground/70 mt-2">{item.description}</p>
               </div>
             ))}
           </div>
@@ -105,11 +105,11 @@ const Work = () => {
             {portfolioItems.map((item, index) => (
               <div
                 key={index}
-                className="bg-white/5 border border-white/10 rounded-xl p-6 hover:bg-white/10 transition-colors cursor-pointer"
+                className="bg-card border border-border rounded-xl p-6 hover:bg-secondary transition-colors cursor-pointer"
               >
-                <span className="text-amber-400 text-sm font-medium">{item.category}</span>
+                <span className="text-primary text-sm font-medium">{item.category}</span>
                 <h3 className="text-xl font-bold mt-2">{item.title}</h3>
-                <p className="text-white/70 mt-2">{item.description}</p>
+                <p className="text-muted-foreground mt-2">{item.description}</p>
               </div>
             ))}
           </div>

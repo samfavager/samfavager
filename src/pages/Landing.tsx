@@ -13,9 +13,6 @@ const Landing = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
-      
-      {/* Overlay to hide watermark in bottom right */}
-      <div className="absolute bottom-0 right-0 w-24 h-20 bg-gradient-to-tl from-[#3d4a3d] via-[#3d4a3d]/80 to-transparent" />
 
       {/* Social links - top left */}
       <div className="absolute top-6 left-6 flex items-center gap-4 z-10">
@@ -99,14 +96,6 @@ const Landing = () => {
         </div>
       )}
 
-      {/* Value proposition box */}
-      <div className="absolute bottom-8 left-8 z-10">
-        <div className="bg-white/70 backdrop-blur-md rounded-2xl p-6 border border-white/40 w-64 h-64 flex items-center">
-          <p className="text-black text-xl md:text-2xl text-left" style={{ fontFamily: "'Permanent Marker', cursive" }}>
-            Fractional CPO & Product Director — helping startups build products users love
-          </p>
-        </div>
-      </div>
     </div>
   );
 };
