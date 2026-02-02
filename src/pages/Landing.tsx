@@ -14,22 +14,6 @@ const Landing = () => {
         style={{ backgroundImage: `url(${heroImage})` }}
       />
 
-      {/* Bottom-right watermark mask */}
-      <div
-        className="pointer-events-none absolute bottom-0 right-0 z-[1] h-32 w-56 bg-gradient-to-tl from-background via-background/90 to-transparent backdrop-blur-sm"
-        aria-hidden="true"
-      />
-
-      {/* Bottom-left caption */}
-      <div className="absolute bottom-6 left-6 z-10 w-[min(28rem,calc(100vw-3rem))] rounded-lg border border-border bg-foreground/75 p-5 text-left text-background backdrop-blur-md">
-        <p
-          className="text-xl leading-snug md:text-2xl"
-          style={{ fontFamily: "Georgia, ui-serif, serif" }}
-        >
-          Venture architect helping businesses adopt technology
-        </p>
-      </div>
-
       {/* Social links - top left */}
       <div className="absolute top-6 left-6 flex items-center gap-4 z-10">
         <a 
