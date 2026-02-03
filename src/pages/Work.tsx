@@ -3,51 +3,69 @@ import { ArrowLeft, Download, Briefcase } from "lucide-react";
 
 const workHistory = [
   {
-    year: "2022 - Present",
+    year: "January 2024 - Present",
+    role: "Head of Product - Platform & SaaS Products",
+    company: "Digimarc Corporation (NASDAQ: DMRC)",
+    description: "Leading product management for cloud platform unification, mobile apps, and developer tools/SDKs. Grew subscription ARR by >50% at 85% gross profit margins.",
+  },
+  {
+    year: "May 2022 - December 2023",
     role: "Senior Product Manager",
-    company: "Tech Company",
-    description: "Leading product strategy for core platform features.",
+    company: "Digimarc Corporation (NASDAQ: DMRC)",
+    description: "Led product strategy and GTM for Recycling software solutions, helping CPG brands transform plastic packaging recycling. Opened landmark pilots in France, Belgium, and Canada.",
   },
   {
-    year: "2019 - 2022",
-    role: "Product Manager",
-    company: "Startup Inc",
-    description: "Built and scaled consumer-facing products from 0 to 1M users.",
+    year: "September 2019 - May 2022",
+    role: "Head of Software & Services / Senior PM, IoT",
+    company: "Hilti",
+    description: "Led IoT/asset tracking software portfolio for construction industry. Grew customers at 20% CAGR to 15,000+ users, ~£5m ARR, reducing churn to <10%.",
   },
   {
-    year: "2017 - 2019",
-    role: "Associate Product Manager",
-    company: "Enterprise Corp",
-    description: "Managed B2B product features and integrations.",
+    year: "2018 - Present",
+    role: "Co-Founder & Advisor",
+    company: "PIN IoT Ltd.",
+    description: "Identified market opportunity for asset tracking in commercial waste management. Successfully completed Startup Bootcamp accelerator; achieved product-market-fit and market leading position in UK niche.",
   },
   {
-    year: "2015 - 2017",
-    role: "Business Analyst",
-    company: "Consulting Firm",
-    description: "Strategy and operations consulting for Fortune 500 clients.",
+    year: "October 2017 - April 2018",
+    role: "Product Director",
+    company: "PLS Ltd.",
+    description: "Led product strategy for industrial asset tracking startup incubated inside £1bn Bibby Line Group. Secured landmark projects with 3 UK retailers and 1 automotive manufacturer.",
+  },
+  {
+    year: "October 2014 - October 2016",
+    role: "Commercial Manager",
+    company: "PLS Ltd.",
+    description: "Commercial lead managing C-level sales engagements with ~25 enterprise accounts. Established new GTM models and channel partner relationships.",
+  },
+  {
+    year: "June 2011 - October 2014",
+    role: "Strategy Development Manager/Analyst",
+    company: "Bibby Line Group",
+    description: "Supported exec board in shaping strategy of £350m revenue portfolio. Conducted M&A due diligence including asset tracking software acquisition that catalyzed career pivot to product management.",
   },
 ];
 
 const portfolioItems = [
   {
-    title: "Platform Redesign",
-    category: "Product Strategy",
-    description: "Led complete platform overhaul increasing user engagement by 40%.",
+    title: "Cloud Platform Unification",
+    category: "Platform Strategy",
+    description: "Unified legacy platforms, mobile apps, and developer tools/SDKs post-acquisition at Digimarc.",
   },
   {
-    title: "Mobile App Launch",
-    category: "0 to 1",
-    description: "Launched mobile app reaching 500K downloads in first quarter.",
+    title: "Recycling Tech Transformation",
+    category: "0 to Market",
+    description: "Pioneered plastic recycling software solutions with major CPG brands across Europe and Canada.",
   },
   {
-    title: "API Marketplace",
+    title: "IoT Asset Tracking Portfolio",
     category: "B2B Product",
-    description: "Built developer ecosystem generating $2M ARR.",
+    description: "Built and scaled IoT software portfolio for construction industry to 15,000+ users and £5m ARR.",
   },
   {
-    title: "Growth Experiments",
-    category: "Experimentation",
-    description: "Ran 50+ experiments improving conversion by 25%.",
+    title: "PIN IoT Startup",
+    category: "Entrepreneurship",
+    description: "Co-founded asset tracking solution achieving product-market-fit and market leadership in UK waste management.",
   },
 ];
 

@@ -39,7 +39,7 @@ const Landing = () => {
           </svg>
         </a>
         <a 
-          href="https://linkedin.com" 
+          href="https://www.linkedin.com/in/sam-favager-26488119/" 
           target="_blank" 
           rel="noopener noreferrer"
           className="text-white hover:text-white/70 transition-colors"
