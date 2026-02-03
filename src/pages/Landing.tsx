@@ -13,6 +13,8 @@ const Landing = () => {
         className="absolute inset-0 bg-cover bg-center bg-no-repeat"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
+      {/* Subtle pink overlay */}
+      <div className="absolute inset-0 bg-primary/10" />
 
       {/* Social links - top left */}
       <div className="absolute top-6 left-6 flex items-center gap-4 z-10">
