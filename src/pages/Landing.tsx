@@ -98,6 +98,18 @@ const Landing = () => {
         </div>
       )}
 
+      {/* Bottom translucent text box */}
+      <div className="absolute bottom-6 left-6 right-6 md:bottom-10 md:left-10 md:right-10 z-10">
+        <div className="bg-black/50 backdrop-blur-sm rounded-lg px-6 py-4 md:px-10 md:py-6">
+          <p 
+            className="text-white text-lg md:text-2xl lg:text-3xl text-center"
+            style={{ fontFamily: "'Tagesschrift', cursive" }}
+          >
+            Venture Architect, helping businesses leverage new technologies to create or transform business models
+          </p>
+        </div>
+      </div>
+
     </div>
   );
 };
