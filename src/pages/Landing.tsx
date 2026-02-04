@@ -98,15 +98,20 @@ const Landing = () => {
         </div>
       )}
 
-      {/* Bottom translucent text box */}
+      {/* Bottom translucent text box - dictionary definition style */}
       <div className="absolute bottom-6 left-6 right-6 md:bottom-10 md:left-10 md:right-10 z-10">
         <div className="bg-black/50 backdrop-blur-sm rounded-lg px-6 py-4 md:px-10 md:py-6">
-          <p 
-            className="text-white text-lg md:text-2xl lg:text-3xl text-center"
-            style={{ fontFamily: "'Tagesschrift', cursive" }}
-          >
-            Venture Architect, helping businesses leverage new technologies to create or transform business models
-          </p>
+          <div className="text-left">
+            <p className="text-white text-xl md:text-3xl lg:text-4xl mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>
+              Ven·ture Ar·chi·tect <span className="text-base md:text-xl lg:text-2xl italic text-white/80">(noun)</span>
+            </p>
+            <p 
+              className="text-white/90 text-base md:text-xl lg:text-2xl"
+              style={{ fontFamily: "'Google Sans', 'Product Sans', sans-serif" }}
+            >
+              Bridging the gap between mature business models and advancing technologies. Specializes in designing, building and commercializing new products and services.
+            </p>
+          </div>
         </div>
       </div>
 
