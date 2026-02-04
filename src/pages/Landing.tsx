@@ -10,7 +10,7 @@ const Landing = () => {
     <div className="relative min-h-screen w-full overflow-hidden">
       {/* Fullscreen background image */}
       <div 
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+        className="absolute inset-0 bg-contain bg-center bg-no-repeat bg-black"
         style={{ backgroundImage: `url(${heroImage})` }}
       />
       {/* Subtle pink overlay */}
