@@ -106,10 +106,12 @@ const Landing = () => {
               Ven·ture Ar·chi·tect <span className="text-base md:text-xl lg:text-2xl italic text-white/80">(noun)</span>
             </p>
             <p 
-              className="text-white/90 text-base md:text-xl lg:text-2xl"
+              className="text-white/90 text-sm md:text-lg lg:text-xl"
               style={{ fontFamily: "'Google Sans', 'Product Sans', sans-serif" }}
             >
-              Bridging the gap between mature business models and advancing technologies. Specializes in designing, building and commercializing new products and services.
+              Bridging the gap between mature business models and advancing technologies.
+              <br />
+              Specializes in designing, building and commercializing new products and services.
             </p>
           </div>
         </div>
