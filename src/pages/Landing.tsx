@@ -18,7 +18,7 @@ const Landing = () => {
       {/* Header bar - overlaid on image */}
       <div className="relative flex items-center justify-between px-6 py-1 z-10">
         {/* Name */}
-        <span className="text-white text-xl md:text-2xl" style={{ fontFamily: "'Playfair Display', serif" }}>
+        <span className="text-white text-xl md:text-2xl" style={{ fontFamily: "'Google Sans', 'Product Sans', sans-serif" }}>
           Sam Favager
         </span>
 
