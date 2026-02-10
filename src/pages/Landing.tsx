@@ -15,15 +15,15 @@ const Landing = () => {
       />
       <div className="absolute inset-0 bg-primary/10" />
 
-      {/* Header bar - overlaid on image */}
-      <div className="relative flex items-center justify-between px-6 py-1 z-10">
+      {/* Icons overlaid on image */}
+      <div className="absolute top-0 left-0 right-0 flex items-center justify-between px-6 py-4 z-10">
         {/* Social links */}
         <div className="flex items-center gap-4">
           <a 
             href="https://substack.com" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-white hover:text-white/70 transition-colors"
+            className="text-black hover:text-black/70 transition-colors"
             aria-label="Substack"
           >
             <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
@@ -34,7 +34,7 @@ const Landing = () => {
             href="https://x.com" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-white hover:text-white/70 transition-colors"
+            className="text-black hover:text-black/70 transition-colors"
             aria-label="X (Twitter)"
           >
             <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
@@ -45,7 +45,7 @@ const Landing = () => {
             href="https://www.linkedin.com/in/sam-favager-26488119/" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="text-white hover:text-white/70 transition-colors"
+            className="text-black hover:text-black/70 transition-colors"
             aria-label="LinkedIn"
           >
             <svg className="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
@@ -57,7 +57,7 @@ const Landing = () => {
         {/* Burger menu */}
         <button
           onClick={() => setMenuOpen(!menuOpen)}
-          className="z-20 text-white hover:text-white/70 transition-colors"
+          className="z-20 text-black hover:text-black/70 transition-colors"
           aria-label="Toggle menu"
         >
           {menuOpen ? <X className="w-8 h-8" /> : <Menu className="w-8 h-8" />}
