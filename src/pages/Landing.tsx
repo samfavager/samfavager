@@ -7,9 +7,16 @@ const Landing = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
-    <div className="relative min-h-screen w-full flex flex-col bg-black">
-      {/* Header bar */}
-      <div className="flex items-center justify-between px-6 py-4 z-10">
+    <div className="relative min-h-screen w-full bg-black">
+      {/* Full-bleed image */}
+      <div 
+        className="absolute inset-0 bg-contain bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${heroImage})` }}
+      />
+      <div className="absolute inset-0 bg-primary/10" />
+
+      {/* Header bar - overlaid on image */}
+      <div className="relative flex items-center justify-between px-6 py-4 z-10">
         {/* Social links */}
         <div className="flex items-center gap-4">
           <a 
@@ -93,17 +100,8 @@ const Landing = () => {
         </div>
       )}
 
-      {/* Image area */}
-      <div className="flex-1 relative">
-        <div 
-          className="absolute inset-0 bg-contain bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${heroImage})` }}
-        />
-        <div className="absolute inset-0 bg-primary/10" />
-      </div>
-
-      {/* Footer with definition text */}
-      <div className="px-6 py-4 md:px-10 md:py-6 text-left">
+      {/* Footer with definition text - overlaid at bottom */}
+      <div className="absolute bottom-0 left-0 right-0 px-6 py-4 md:px-10 md:py-6 text-left z-10">
         <p className="text-white text-xl md:text-3xl lg:text-4xl mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>
           Ven·ture Ar·chi·tect <span className="text-base md:text-xl lg:text-2xl italic text-white/80">(noun)</span>
         </p>
