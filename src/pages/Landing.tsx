@@ -17,13 +17,8 @@ const Landing = () => {
 
       {/* Header bar - overlaid on image */}
       <div className="relative flex items-center justify-between px-6 py-1 z-10">
-        {/* Name */}
-        <span className="text-white text-xl md:text-2xl" style={{ fontFamily: "'Google Sans', 'Product Sans', sans-serif" }}>
-          Sam Favager
-        </span>
-
-        {/* Social links - centered */}
-        <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-4">
+        {/* Social links */}
+        <div className="flex items-center gap-4">
           <a 
             href="https://substack.com" 
             target="_blank" 
