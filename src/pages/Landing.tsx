@@ -102,11 +102,11 @@ const Landing = () => {
 
       {/* Footer with definition text - overlaid at bottom */}
       <div className="absolute bottom-0 left-0 right-0 px-6 py-4 md:px-10 md:py-6 text-left z-10">
-        <p className="text-white text-xl md:text-3xl lg:text-4xl mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>
-          Ven·ture Ca·ta·lyst <span className="text-base md:text-xl lg:text-2xl italic text-white/80">(noun)</span>
+        <p className="text-white text-lg md:text-2xl lg:text-3xl mb-1" style={{ fontFamily: "'Playfair Display', serif" }}>
+          Ven·ture Ca·ta·lyst <span className="text-sm md:text-lg lg:text-xl italic text-white/80">(noun)</span>
         </p>
         <p 
-          className="text-white/90 text-sm md:text-lg lg:text-xl"
+           className="text-white/90 text-xs md:text-base lg:text-lg"
           style={{ fontFamily: "'Google Sans', 'Product Sans', sans-serif" }}
         >
           Bridging the gap between mature business models and advancing technologies.
