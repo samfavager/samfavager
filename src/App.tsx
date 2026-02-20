@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Landing from "./pages/Landing";
+import LandingAlt from "./pages/LandingAlt";
 import Work from "./pages/Work";
 import Thinking from "./pages/Thinking";
 import HowICanHelp from "./pages/HowICanHelp";
@@ -19,7 +20,8 @@ const App = () => (
       <Sonner />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Landing />} />
+          <Route path="/" element={<LandingAlt />} />
+          <Route path="/original" element={<Landing />} />
           <Route path="/work" element={<Work />} />
           <Route path="/thinking" element={<Thinking />} />
           <Route path="/how-i-can-help" element={<HowICanHelp />} />
